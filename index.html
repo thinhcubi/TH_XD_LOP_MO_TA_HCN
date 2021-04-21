@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+<script>
+    let Rectangle = function (width,height,perimeter,acreage) {
+        this.width = width;
+        this.height = height;
+        this.perimeter = perimeter;
+        this.acreage = acreage;
+
+        this.getWidth = function () {
+            return width;
+        }
+        this.getHeight = function () {
+            return height;
+        }
+        this.getPerimeter = function () {
+            return (width + height) * 2;
+        }
+        this.getAcreage = function () {
+            return width * height;
+        }
+    }
+   let rectangle = new Rectangle(6,4);
+    let width = rectangle.getWidth();
+    let height = rectangle.getHeight();
+    let perimeter = rectangle.getPerimeter();
+    let acreage = rectangle.getAcreage();
+    alert("Chieu dai:"+ width + "chieu rong : "+height + "chu vi:" + perimeter + "dien tich:" +acreage)
+
+
+    function  ccRectangle() {
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 200, 300);
+    } ccRectangle()
+
+</script>
+
+</body>
+</html>
